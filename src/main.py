@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
 import fibonacci as fib
-import json
 
 app = Flask(__name__)
 
