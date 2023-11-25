@@ -8,11 +8,10 @@ app = Flask(__name__)
 def fibonacci():
     n = request.args.get('n')
 
-    if n is None or not n.isdigit():
+    if n is None or not n.isdigit() or n == "0":
         return {"status": 400, "message": "Bad request."}
 
     n = int(n)
-
 
     result = fib.calculate_fibonacci(n)
     response = {"result": result}
